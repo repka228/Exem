@@ -9,7 +9,20 @@ namespace Exem
     public class Task1_class
     {
         private int[]? arr;
-        public string Task1_1(int size)
+        int size;
+        public Task1_class(int size)
+        {
+            if (size >= 10) { 
+                arr = new int[size];
+                this.size = size;
+            }
+            else
+            {
+                this.size = new Random().Next(10,21);
+                arr = new int[this.size];
+            }
+        }
+        public string Task1()
         {
             arr = new int[size];
             StringBuilder answer = new();
@@ -30,7 +43,7 @@ namespace Exem
             answer.Append("Кол-во > 0 = " + count.ToString() + " Их сумма = " + sum.ToString());
             return answer.ToString();
         }
-        public string Task1_2(int size, int target)
+        public string Task1(int target)
         {
             arr = new int[size];
             StringBuilder answer = new();

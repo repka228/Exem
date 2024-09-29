@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             buttonTask1_1 = new Button();
-            numericUpDownArraySize = new NumericUpDown();
             labelArraySize = new Label();
             buttonTask1_2 = new Button();
             textBoxTarget = new TextBox();
@@ -38,7 +37,7 @@
             textBoxTask1_2 = new TextBox();
             labelAnswerTask1_1 = new Label();
             labelAnswerTask1_2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownArraySize).BeginInit();
+            textBoxArraySize = new TextBox();
             SuspendLayout();
             // 
             // buttonTask1_1
@@ -50,15 +49,6 @@
             buttonTask1_1.Text = "Задание 1";
             buttonTask1_1.UseVisualStyleBackColor = true;
             buttonTask1_1.Click += ButtonTask1_1_Click;
-            // 
-            // numericUpDownArraySize
-            // 
-            numericUpDownArraySize.Location = new Point(12, 41);
-            numericUpDownArraySize.Minimum = new decimal(new int[] { 10, 0, 0, 0 });
-            numericUpDownArraySize.Name = "numericUpDownArraySize";
-            numericUpDownArraySize.Size = new Size(120, 23);
-            numericUpDownArraySize.TabIndex = 1;
-            numericUpDownArraySize.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
             // labelArraySize
             // 
@@ -127,11 +117,19 @@
             labelAnswerTask1_2.TabIndex = 9;
             labelAnswerTask1_2.Text = "Ответ";
             // 
+            // textBoxArraySize
+            // 
+            textBoxArraySize.Location = new Point(12, 41);
+            textBoxArraySize.Name = "textBoxArraySize";
+            textBoxArraySize.Size = new Size(100, 23);
+            textBoxArraySize.TabIndex = 10;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBoxArraySize);
             Controls.Add(labelAnswerTask1_2);
             Controls.Add(labelAnswerTask1_1);
             Controls.Add(textBoxTask1_2);
@@ -140,11 +138,9 @@
             Controls.Add(textBoxTarget);
             Controls.Add(buttonTask1_2);
             Controls.Add(labelArraySize);
-            Controls.Add(numericUpDownArraySize);
             Controls.Add(buttonTask1_1);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)numericUpDownArraySize).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -152,7 +148,6 @@
         #endregion
 
         private Button buttonTask1_1;
-        private NumericUpDown numericUpDownArraySize;
         private Label labelArraySize;
         private Button buttonTask1_2;
         private TextBox textBoxTarget;
@@ -161,5 +156,6 @@
         private TextBox textBoxTask1_2;
         private Label labelAnswerTask1_1;
         private Label labelAnswerTask1_2;
+        private TextBox textBoxArraySize;
     }
 }
