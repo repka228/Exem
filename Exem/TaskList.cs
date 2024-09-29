@@ -10,6 +10,7 @@ namespace Exem
 {
     public class TaskList : INterfaceTask3
     {
+        public string Name => GetType().Name + " " + allow.ToString();
         private readonly List<int>? arr;
         private readonly int allow;
         public TaskList(int size)
@@ -24,9 +25,7 @@ namespace Exem
             }
         }
 
-        public int this[int ind] => arr != null ? arr[ind] : -101;
-
-        public string Name => GetType().Name + " " + allow.ToString();
+        public int this[int ind] => arr != null ? arr[ind] : -101;         
         public string Task1()
         {
             StringBuilder answer = new();

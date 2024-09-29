@@ -11,6 +11,7 @@ namespace Exem
     {
         private int[]? arr;
         int size;
+        public string Name => GetType().Name + " " + size.ToString();
         public Task1_class(int size)
         {
             if (size >= 10) { 

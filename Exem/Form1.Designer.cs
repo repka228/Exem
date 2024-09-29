@@ -38,6 +38,7 @@
             labelAnswerTask1_1 = new Label();
             labelAnswerTask1_2 = new Label();
             textBoxArraySize = new TextBox();
+            listBoxTask4 = new ListBox();
             SuspendLayout();
             // 
             // buttonTask1_1
@@ -124,11 +125,21 @@
             textBoxArraySize.Size = new Size(100, 23);
             textBoxArraySize.TabIndex = 10;
             // 
+            // listBoxTask4
+            // 
+            listBoxTask4.FormattingEnabled = true;
+            listBoxTask4.ItemHeight = 15;
+            listBoxTask4.Location = new Point(12, 315);
+            listBoxTask4.Name = "listBoxTask4";
+            listBoxTask4.Size = new Size(338, 94);
+            listBoxTask4.TabIndex = 11;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(listBoxTask4);
             Controls.Add(textBoxArraySize);
             Controls.Add(labelAnswerTask1_2);
             Controls.Add(labelAnswerTask1_1);
@@ -157,5 +168,6 @@
         private Label labelAnswerTask1_1;
         private Label labelAnswerTask1_2;
         private TextBox textBoxArraySize;
+        private ListBox listBoxTask4;
     }
 }

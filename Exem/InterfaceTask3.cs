@@ -11,5 +11,6 @@ namespace Exem
         public string Task1();
         public string Task1(int target);
         int this[int ind] { get; }
+        public string Name { get; }
     }
 }
