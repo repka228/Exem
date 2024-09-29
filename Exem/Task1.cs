@@ -21,16 +21,16 @@ namespace Exem
                 this.size = new Random().Next(10,21);
                 arr = new int[this.size];
             }
+            Random random = new();
+            for (int i = 0; i < size; ++i)
+            {
+                arr[i] = random.Next(-100, 101);
+            }
         }
         public string Task1()
         {
             arr = new int[size];
             StringBuilder answer = new();
-            Random random = new();
-            for(int i=0;i < size; ++i)
-            {
-                arr[i] = random.Next(-100,101);
-            }
             int count = 0, sum = 0;
             for(int i = 0; i < size; ++i)
             {
@@ -48,11 +48,6 @@ namespace Exem
             arr = new int[size];
             StringBuilder answer = new();
             answer.Append("Нечётные элементы меньше " + target.ToString() + ": ");
-            Random random = new();
-            for (int i = 0; i < size; ++i)
-            {
-                arr[i] = random.Next(-100,101);
-            }
             for (int i = 0; i < size; ++i)
             {
                 if (i % 2 != 0 && arr[i]<target)
