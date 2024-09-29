@@ -1,44 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
-using System.Runtime.CompilerServices;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Exem
 {
-    public class Task1_class:INterfaceTask3
+    public class TaskList : INterfaceTask3
     {
-        private int[]? arr;
-        int size;
-        public Task1_class(int size)
+        private readonly List<int>? arr;
+        private readonly int allow;
+        public TaskList(int size)
         {
-            if (size >= 10) { 
-                arr = new int[size];
-                this.size = size;
-            }
-            else
-            {
-                this.size = new Random().Next(10,21);
-                arr = new int[this.size];
-            }
-            Random random = new();
+            if (size < 10)
+                size = new Random().Next(10, 21);
+            allow = size;
+            Random rnd = new();
             for (int i = 0; i < size; ++i)
             {
-                arr[i] = random.Next(-100, 101);
+                arr?.Add(rnd.Next(-100, 100));
             }
         }
 
-        public int this[int ind] => arr[ind];
+        public int this[int ind] => arr != null ? arr[ind] : -101;
 
+        public string Name => GetType().Name + " " + allow.ToString();
         public string Task1()
         {
-            arr = new int[size];
             StringBuilder answer = new();
             int count = 0, sum = 0;
-            for(int i = 0; i < size; ++i)
+            for (int i = 0; i < arr?.Count; ++i)
             {
-                if(i>0)
+                if (i > 0)
                 {
                     count++;
                     sum += arr[i];
@@ -49,12 +44,11 @@ namespace Exem
         }
         public string Task1(int target)
         {
-            arr = new int[size];
             StringBuilder answer = new();
             answer.Append("Нечётные элементы меньше " + target.ToString() + ": ");
-            for (int i = 0; i < size; ++i)
+            for (int i = 0; i < arr?.Count; ++i)
             {
-                if (i % 2 != 0 && arr[i]<target)
+                if (i % 2 != 0 && arr[i] < target)
                 {
                     answer.Append(arr[i].ToString() + " ");
                 }
