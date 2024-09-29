@@ -45,6 +45,8 @@
             buttonInvokeMethod1 = new Button();
             buttonMethod1_1Del = new Button();
             buttonMethod1_2Del = new Button();
+            saveFileDialog1 = new SaveFileDialog();
+            buttonSave = new Button();
             SuspendLayout();
             // 
             // buttonTask1_1
@@ -200,11 +202,22 @@
             buttonMethod1_2Del.UseVisualStyleBackColor = true;
             buttonMethod1_2Del.Click += buttonMethod1_2Del_Click;
             // 
+            // buttonSave
+            // 
+            buttonSave.Location = new Point(713, 415);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(75, 23);
+            buttonSave.TabIndex = 18;
+            buttonSave.Text = "Сохранить";
+            buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Click += ButtonSave_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonSave);
             Controls.Add(buttonMethod1_2Del);
             Controls.Add(buttonMethod1_1Del);
             Controls.Add(buttonInvokeMethod1);
@@ -247,5 +260,7 @@
         private Button buttonInvokeMethod1;
         private Button buttonMethod1_1Del;
         private Button buttonMethod1_2Del;
+        private SaveFileDialog saveFileDialog1;
+        private Button buttonSave;
     }
 }

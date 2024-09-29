@@ -1,5 +1,6 @@
 using System.Drawing.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Exem
 {
@@ -93,6 +94,34 @@ namespace Exem
                 if (task1_2_method != null)
                 {
                     task1_2_method -= selectedTask.Task1;
+                }
+            }
+        }
+        private void ButtonSave_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    using (StreamWriter writer = new (saveFileDialog1.FileName))
+                    {
+                        foreach (INterfaceTask3 task in list_task4)
+                        {
+                            
+                            string result1 = task.Task1();
+                            string result2;
+                            if (int.TryParse(textBoxTarget.Text, out int target))
+                                result2 = task.Task1(int.Parse(textBoxTarget.Text));
+                            else
+                                result2 = task.Task1(new Random().Next(-100,101));
+                            writer.WriteLine($"{task.Name}.{result1}.{result2}");
+                        }
+                    }
+                    MessageBox.Show("Данные успешно сохранены.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при сохранении файла: {ex.Message}");
                 }
             }
         }
