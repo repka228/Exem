@@ -39,6 +39,12 @@
             labelAnswerTask1_2 = new Label();
             textBoxArraySize = new TextBox();
             listBoxTask4 = new ListBox();
+            buttonMethod1 = new Button();
+            buttonMethod2 = new Button();
+            buttonInvokeMethod2 = new Button();
+            buttonInvokeMethod1 = new Button();
+            buttonMethod1_1Del = new Button();
+            buttonMethod1_2Del = new Button();
             SuspendLayout();
             // 
             // buttonTask1_1
@@ -134,11 +140,77 @@
             listBoxTask4.Size = new Size(338, 94);
             listBoxTask4.TabIndex = 11;
             // 
+            // buttonMethod1
+            // 
+            buttonMethod1.Location = new Point(518, 40);
+            buttonMethod1.Name = "buttonMethod1";
+            buttonMethod1.Size = new Size(118, 23);
+            buttonMethod1.TabIndex = 12;
+            buttonMethod1.Text = "Добавить 1 метод";
+            buttonMethod1.UseVisualStyleBackColor = true;
+            buttonMethod1.Click += buttonMethod1_Click;
+            // 
+            // buttonMethod2
+            // 
+            buttonMethod2.Location = new Point(518, 69);
+            buttonMethod2.Name = "buttonMethod2";
+            buttonMethod2.Size = new Size(118, 23);
+            buttonMethod2.TabIndex = 13;
+            buttonMethod2.Text = "Вызвать 1 метод";
+            buttonMethod2.UseVisualStyleBackColor = true;
+            buttonMethod2.Click += buttonInvokeMethod1_Click;
+            // 
+            // buttonInvokeMethod2
+            // 
+            buttonInvokeMethod2.Location = new Point(642, 70);
+            buttonInvokeMethod2.Name = "buttonInvokeMethod2";
+            buttonInvokeMethod2.Size = new Size(118, 23);
+            buttonInvokeMethod2.TabIndex = 14;
+            buttonInvokeMethod2.Text = "Вызвать 2 метод";
+            buttonInvokeMethod2.UseVisualStyleBackColor = true;
+            buttonInvokeMethod2.Click += buttonInvokeMethod2_Click;
+            // 
+            // buttonInvokeMethod1
+            // 
+            buttonInvokeMethod1.Location = new Point(642, 41);
+            buttonInvokeMethod1.Name = "buttonInvokeMethod1";
+            buttonInvokeMethod1.Size = new Size(118, 23);
+            buttonInvokeMethod1.TabIndex = 15;
+            buttonInvokeMethod1.Text = "Добавить 2 метод";
+            buttonInvokeMethod1.UseVisualStyleBackColor = true;
+            buttonInvokeMethod1.Click += buttonMethod2_Click;
+            // 
+            // buttonMethod1_1Del
+            // 
+            buttonMethod1_1Del.Location = new Point(518, 96);
+            buttonMethod1_1Del.Name = "buttonMethod1_1Del";
+            buttonMethod1_1Del.Size = new Size(118, 23);
+            buttonMethod1_1Del.TabIndex = 16;
+            buttonMethod1_1Del.Text = "Удалить метод 1";
+            buttonMethod1_1Del.UseVisualStyleBackColor = true;
+            buttonMethod1_1Del.Click += buttonMethod1_1Del_Click;
+            // 
+            // buttonMethod1_2Del
+            // 
+            buttonMethod1_2Del.Location = new Point(642, 96);
+            buttonMethod1_2Del.Name = "buttonMethod1_2Del";
+            buttonMethod1_2Del.Size = new Size(118, 23);
+            buttonMethod1_2Del.TabIndex = 17;
+            buttonMethod1_2Del.Text = "Удалить метод 2";
+            buttonMethod1_2Del.UseVisualStyleBackColor = true;
+            buttonMethod1_2Del.Click += buttonMethod1_2Del_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonMethod1_2Del);
+            Controls.Add(buttonMethod1_1Del);
+            Controls.Add(buttonInvokeMethod1);
+            Controls.Add(buttonInvokeMethod2);
+            Controls.Add(buttonMethod2);
+            Controls.Add(buttonMethod1);
             Controls.Add(listBoxTask4);
             Controls.Add(textBoxArraySize);
             Controls.Add(labelAnswerTask1_2);
@@ -169,5 +241,11 @@
         private Label labelAnswerTask1_2;
         private TextBox textBoxArraySize;
         private ListBox listBoxTask4;
+        private Button buttonMethod1;
+        private Button buttonMethod2;
+        private Button buttonInvokeMethod2;
+        private Button buttonInvokeMethod1;
+        private Button buttonMethod1_1Del;
+        private Button buttonMethod1_2Del;
     }
 }

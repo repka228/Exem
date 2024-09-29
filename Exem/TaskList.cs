@@ -17,8 +17,12 @@ namespace Exem
         {
             if (size < 10)
                 size = new Random().Next(10, 21);
-            allow = size;
+            else
+            {
+                allow = size;
+            }
             Random rnd = new();
+            arr = new List<int>(allow);
             for (int i = 0; i < size; ++i)
             {
                 arr?.Add(rnd.Next(-100, 100));
