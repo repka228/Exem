@@ -29,7 +29,6 @@ namespace Exem
         }
         public string Task1()
         {
-            arr = new int[size];
             StringBuilder answer = new();
             int count = 0, sum = 0;
             for(int i = 0; i < size; ++i)
@@ -45,7 +44,6 @@ namespace Exem
         }
         public string Task1(int target)
         {
-            arr = new int[size];
             StringBuilder answer = new();
             answer.Append("Нечётные элементы меньше " + target.ToString() + ": ");
             for (int i = 0; i < size; ++i)
